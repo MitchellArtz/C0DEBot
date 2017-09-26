@@ -106,17 +106,17 @@ const prefix = config.prefix;
 
   if (command === "copyright") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('©2017 BotBREH™ and Memes#2545');
+   message.channel.sendMessage('©2017 C0DEBot™ and C0DE#0092');
   }
 
   if (command === "about") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-    message.channel.sendMessage('Another Bot BREH cause my old one died anyway. This is Bot BREH a good Bot coded in Discord.js.');
+    message.channel.sendMessage('Another Bot BREH cause my old one died anyway. This is C0DE Bot a good Bot coded in Discord.js.');
   }
 
-  if (command === "whoismemes") {
+  if (command === "whoisc0de") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('Memes is the coder of this bot you shit.');
+   message.channel.sendMessage('C0DE is the coder of this bot you shit.');
   }
 
   if (command === "tableflip") {
@@ -234,7 +234,7 @@ const prefix = config.prefix;
       .setTitle('Help')
       .setColor(message.guild.me.displayHexColor)
       .setTimestamp()
-      .setFooter('Help for BotBREH.')
+      .setFooter('Help for C0DE Bot.')
       .setDescription("Select a Category by doing ==help Category")
       .addField('⚙ General', "Select by doing ==help general")
       .addField('⚒ Moderation', 'Select by doing ==help moderation')
@@ -357,7 +357,7 @@ const prefix = config.prefix;
        const embed = new Discord.RichEmbed()
        .setAuthor(`Avatar for ${message.author.tag}`)
        .setColor(message.guild.me.displayHexColor)
-       .setFooter(`Bot BREH Avatar Command`)
+       .setFooter(`C0DE Bot Avatar Command`)
        .setTimestamp()
        .setImage(message.author.avatarURL)
        return message.channel.sendEmbed(embed)
@@ -400,7 +400,7 @@ const prefix = config.prefix;
     const embed = new Discord.RichEmbed()
     .setTitle("Server Icon")
     .setColor(message.guild.me.displayHexColor)
-    .setFooter(`Bot BREH Sever Icon Command`)
+    .setFooter(`C0DE Bot Sever Icon Command`)
     .setTimestamp()
     .setImage(message.guild.iconURL)
     return message.channel.sendEmbed(embed)

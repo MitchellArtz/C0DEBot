@@ -555,9 +555,6 @@ if (command === "credits") {
   .setTitle("Bot Credits")
   .setDescription("Credits of the bot.")
   .addField("Owner", `<@${config.ownerid}>`, true)
-  .addField("Helpers", `<@${config.ownerid}> <@126119057232625664>`, true)
-  .addField("Main Coder", `<@${config.ownerid}>`, true)
-  .addField("Other Coder", `<@126119057232625664>`, true)
   message.channel.sendEmbed(embed)
 }
 
@@ -578,6 +575,10 @@ if(command === "randbot") {
 if(command === "servers") {
     if(message.author.id !== config.ownerid) return message.channel.sendMessage("You do not have permission to use this command")
     message.channel.send(bot.guilds.map(guild => guild.name))
+}
+	 if(command === "serversid") {
+    if(message.author.id !== config.ownerid) return message.channel.sendMessage("You do not have permission to use this command")
+    message.channel.send(bot.guilds.map(guild => guild.id))
 }
 
 if (command === "sad"){

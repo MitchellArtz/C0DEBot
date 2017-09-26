@@ -234,6 +234,16 @@ const prefix = config.prefix;
     .addField("authorinfo", "Gives info of the person who sent the message", true)
      .addField("userinfo", "Gives info of the person who was tagged", true)
     .addField("stats", "Gives the stats of the bot", true))
+     return;
+  } else
+  if(category === "owner") {
+    message.channel.sendMessage("Check your DMs")
+    message.author.sendEmbed(new Discord.RichEmbed()
+    .setTitle("Help - Owner")
+    .setDescription("Commands for bot owner (C0DE)")
+    .setColor(message.guild.me.displayHexColor)
+    .addField("serverinfo", "Gives info of the current server", true)
+    .addField("stats", "Gives the stats of the bot", true))
   return;
   } else
       message.channel.sendEmbed(new Discord.RichEmbed()

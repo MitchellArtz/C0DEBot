@@ -6,7 +6,7 @@ const Jimp = require('jimp');
 var blacklisted = require("./blacklisted.json").blacklisted
 var admin_ids = require("./admins.json").admin_ids;
 var config = require("./config.json")
-let apitoken = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4OTAyODk5MTA2OTk3ODYyNCIsImlhdCI6MTQ5NTQwMzMyNn0.dhQGtgWmLi-ZcdCB-Bjc3-2xQXljRIIeHd-3OkgPR8w")
+let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DKvKQQ.iVTHAVvbEzaZvltxO2nHKDS9G4Y")
 
 bot.on('ready', () => {
     console.log('Logged in as ' + bot.user.tag + ' and I am on ' + bot.guilds.size + ' guilds!')

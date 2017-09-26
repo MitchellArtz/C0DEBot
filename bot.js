@@ -385,7 +385,7 @@ const prefix = config.prefix;
     .setColor(message.guild.me.displayHexColor)
     .setTimestamp()
     .setAuthor("Server Invite", bot.user.avatarURL)
-    .addField("The server invite is", "https://Discord.gg/MK8qdN4")
+    .addField("The server invite is", "https://Discord.gg/Bots")
     message.channel.sendMessage("Check your DMs")
     message.author.sendEmbed(embed)
   }
@@ -408,11 +408,11 @@ const prefix = config.prefix;
 
   if(command === "stats") {
     const embed = new Discord.RichEmbed()
-    .setTitle("🖥 | Bot BREH Status Report", bot.user.avatarURL)
+    .setTitle("🖥 | C0DE Bot Status Report", bot.user.avatarURL)
     .setColor(message.guild.me.displayHexColor)
-    .setFooter(`Stats of Bot BREH`)
+    .setFooter(`Stats of C0DE Bot`)
     .setTimestamp()
-    .setDescription('All Stats for Bot BREH')
+    .setDescription('All Stats for C0DE Bot')
     .addField("Ping", `${bot.ping} ms`, true)
     .addField('Memory', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB", true)
     .addField('Guilds', `${bot.guilds.size}`)

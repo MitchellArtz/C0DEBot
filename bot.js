@@ -38,8 +38,8 @@ bot.on("guildCreate", guild => {
         }
     });
 superagent
-            .post("https://Discordbots.org/api/bots/296079420345810946/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: Bot BREH; +https://www.Discordapp.com")
+            .post("https://discordbots.org/api/bots/359464699957477378/stats")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
             .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });

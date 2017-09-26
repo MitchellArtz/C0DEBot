@@ -39,7 +39,7 @@ bot.on("guildCreate", guild => {
     });
 superagent
             .post("https://Discordbots.org/api/bots/296079420345810946/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: Bot BREH; +https://www.Discordapp.com")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
             .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
@@ -69,7 +69,7 @@ const embed = new Discord.RichEmbed()
     }
 superagent
             .post("https://Discordbots.org/api/bots/296079420345810946/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: Bot BREH; +https://www.Discordapp.com")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
             .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
@@ -101,22 +101,22 @@ const prefix = config.prefix;
 
   if (command === "whoami") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('Im a bot made by Memes#2545.');
+   message.channel.sendMessage('Im a bot made by C0DE#0092.');
   }
 
   if (command === "copyright") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('©2017 BotBREH™ and Memes#2545');
+   message.channel.sendMessage('©2017 C0DEBot™ and C0DE#0092');
   }
 
   if (command === "about") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-    message.channel.sendMessage('Another Bot BREH cause my old one died anyway. This is Bot BREH a good Bot coded in Discord.js.');
+    message.channel.sendMessage('Another Bot BREH cause my old one died anyway. This is C0DE Bot a good Bot coded in Discord.js.');
   }
 
-  if (command === "whoismemes") {
+  if (command === "whoisc0de") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('Memes is the coder of this bot you shit.');
+   message.channel.sendMessage('C0DE is the coder of this bot you shit.');
   }
 
   if (command === "tableflip") {
@@ -166,7 +166,7 @@ const prefix = config.prefix;
   if (command === "invite") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
       message.channel.sendMessage("Check your DMs")
-      message.author.sendMessage("https://Discordapp.com/oauth2/authorize?client_id=296079420345810946&scope=bot&permissions=8");
+      message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=359464699957477378&scope=bot&permissions=2146958591");
   }
 
   if (command === "help") {

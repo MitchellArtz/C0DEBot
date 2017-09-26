@@ -180,10 +180,10 @@ const prefix = config.prefix;
         .setDescription('Commands that are in the Other Category')
         .addField("help", "This menu", true)
         .addField("servericon", "Gives current icon for the server", true)
-        .addField("id", "Gets your ID \n", true)
         .addField("avatar", "Gives you your avatar", true)
 	.addField("ping", "Ping pong and shows response time", true)
 	.addField("invite", "Invite this bot to your server", true)
+			      .addField("id", "Gets your id", true)
         .addField("credits", "Credits", true))
     return;
     } else

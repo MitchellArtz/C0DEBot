@@ -572,13 +572,9 @@ if(command === "randbot") {
     message.channel.sendEmbed(embed)
 }
 
-if(command === "servers") {
+	 if(command === "servers") {
     if(message.author.id !== config.ownerid) return message.channel.sendMessage("You do not have permission to use this command")
-    message.channel.send(bot.guilds.map(guild => guild.name))
-}
-	 if(command === "serversid") {
-    if(message.author.id !== config.ownerid) return message.channel.sendMessage("You do not have permission to use this command")
-    message.channel.send(bot.guilds.map(guild => (guild.name) + "\n" +(guild.id)))
+    message.channel.send(bot.guilds.map(guild => (**guild.name**) + "\n" + (guild.id) + "\n"))
 }
 
 if (command === "sad"){

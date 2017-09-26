@@ -535,9 +535,6 @@ if (command === "credits") {
   .setTitle("Bot Credits")
   .setDescription("Credits of the bot.")
   .addField("Owner", `<@${config.ownerid}>`, true)
-  .addField("Helpers", `<@${config.ownerid}> <@126119057232625664>`, true)
-  .addField("Main Coder", `<@${config.ownerid}>`, true)
-  .addField("Other Coder", `<@126119057232625664>`, true)
   message.channel.sendEmbed(embed)
 }
 

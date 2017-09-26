@@ -1,7 +1,7 @@
 {
-  "name": "botbreh",
+  "name": "X0DEBot",
   "version": "1.0.0",
-  "description": "A Discord bot developed by: Memes#2545",
+  "description": "A Discord bot developed by: C0DE#0092",
   "main": "bot.js",
   "engines": {
     "node": "8.1.4"
@@ -20,6 +20,6 @@
     "Discord",
     "Bot"
   ],
-  "author": "Memes#2545",
+  "author": "C0DE#0092",
   "license": "ISC"
 }

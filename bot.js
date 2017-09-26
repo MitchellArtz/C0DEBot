@@ -182,6 +182,7 @@ const prefix = config.prefix;
         .addField("servericon", "Gives current icon for the server", true)
         .addField("id", "Gets your ID", true)
         .addField("avatar", "Gives you your avatar", true)
+	.addField("ping", "Ping pong and shows response time", true)
         .addField("credits", "Credits", true))
     return;
     } else
@@ -216,6 +217,8 @@ const prefix = config.prefix;
       .setTitle('Help - Fun')
       .setDescription("Commands that are in the Fun Category")
       .setColor(message.guild.me.displayHexColor)
+       .addField("randbot", "replies with a random bot", true)
+        .addField("randuser", "replies with a random bot (Great for giveaways)", true)
       .addField("8ball", "Put a question and it will tell you the truth", true))
   return;
   } else
@@ -227,6 +230,7 @@ const prefix = config.prefix;
     .setColor(message.guild.me.displayHexColor)
     .addField("serverinfo", "Gives info of the current server", true)
     .addField("authorinfo", "Gives info of the person who sent the message", true)
+     .addField("userinfo", "Gives info of the person who was tagged", true)
     .addField("stats", "Gives the stats of the bot", true))
   return;
   } else

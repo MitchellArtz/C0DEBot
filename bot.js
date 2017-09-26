@@ -217,8 +217,9 @@ const prefix = config.prefix;
       .setTitle('Help - Fun')
       .setDescription("Commands that are in the Fun Category")
       .setColor(message.guild.me.displayHexColor)
-       .addField("randbot", "replies with a random bot", true)
-        .addField("randuser", "replies with a random bot (Great for giveaways)", true)
+       .addField("randbot", "Replies with a random bot", true)
+        .addField("randuser", "Replies with a random bot (Great for giveaways)", true)
+			       .addField("say", "Repeats what you said", true)
       .addField("8ball", "Put a question and it will tell you the truth", true))
   return;
   } else

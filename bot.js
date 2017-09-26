@@ -183,7 +183,7 @@ const prefix = config.prefix;
               .addField("avatar", "Gives you your avatar", true)
 	.addField("ping", "Ping pong and shows response time", true)
 	   .addField("invite", "Invite this bot to your server", true)
-			      .addField(" ", " ", true)
+			     
 			      .addField("id", "Gets your id", true)
         .addField("credits", "Credits", true))
     return;

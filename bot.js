@@ -101,7 +101,7 @@ const prefix = config.prefix;
 
   if (command === "whoami") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('Im a bot made by Memes#2545.');
+   message.channel.sendMessage('Im a bot made by C0DE#0092.');
   }
 
   if (command === "copyright") {
@@ -111,7 +111,7 @@ const prefix = config.prefix;
 
   if (command === "about") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-    message.channel.sendMessage('Another Bot BREH cause my old one died anyway. This is C0DE Bot a good Bot coded in Discord.js.');
+    message.channel.sendMessage('Another C0DE Bot cause my old one died anyway. This is C0DE Bot a good Bot coded in Discord.js.');
   }
 
   if (command === "whoisc0de") {
@@ -166,7 +166,7 @@ const prefix = config.prefix;
   if (command === "invite") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
       message.channel.sendMessage("Check your DMs")
-      message.author.sendMessage("https://Discordapp.com/oauth2/authorize?client_id=296079420345810946&scope=bot&permissions=8");
+      message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=359464699957477378&scope=bot&permissions=2146958591");
   }
 
   if (command === "help") {

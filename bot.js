@@ -679,4 +679,5 @@ function doRandomSize(){
 
 }
 
-bot.login("censored")
+
+bot.login(process.env.BOT_TOKEN)

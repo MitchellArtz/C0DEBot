@@ -399,7 +399,7 @@ const prefix = config.prefix;
     process.exit()
   }
 
-  if (command === "server") {
+  if (command === "servergftft") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -574,7 +574,7 @@ if(command === "randbot") {
 
 	 if(command === "servers") {
     if(message.author.id !== config.ownerid) return message.channel.sendMessage("You do not have permission to use this command")
-    message.channel.send(bot.guilds.map(guild => "**" + (guild.name) + "**" + "\n" + (guild.id) + "\n" + "Members:" + (guild.memberCount)))
+    message.author.send(bot.guilds.map(guild => "**" + (guild.name) + "**" + "\n" + (guild.id) + "\n" + "Members:" + (guild.memberCount) + "\n"))
 }
 
 if (command === "sad"){

@@ -235,12 +235,12 @@ const prefix = config.prefix;
       .setColor(message.guild.me.displayHexColor)
       .setTimestamp()
       .setFooter('Help for C0DE Bot.')
-      .setDescription("Select a Category by doing ==help Category")
-      .addField('⚙ General', "Select by doing ==help general")
-      .addField('⚒ Moderation', 'Select by doing ==help moderation')
-      .addField('🎉 Fun', "Select by doing ==help fun")
-      .addField('ℹ Info', "Select by doing ==help info")
-      .addField('➕ Math', "Select by doing ==help math"));
+      .setDescription("Select a Category by doing ++help Category")
+      .addField('⚙ General', "Select by doing ++help general")
+      .addField('⚒ Moderation', 'Select by doing ++help moderation')
+      .addField('🎉 Fun', "Select by doing ++help fun")
+      .addField('ℹ Info', "Select by doing ++help info")
+      .addField('➕ Math', "Select by doing ++help math"));
   }
 
   if (command === "warn"){

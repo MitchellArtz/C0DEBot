@@ -69,7 +69,7 @@ const embed = new Discord.RichEmbed()
     }
 superagent
             .post("https://Discordbots.org/api/bots/296079420345810946/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: Bot BREH; +https://www.Discordapp.com")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
             .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
@@ -385,7 +385,7 @@ const prefix = config.prefix;
     .setColor(message.guild.me.displayHexColor)
     .setTimestamp()
     .setAuthor("Server Invite", bot.user.avatarURL)
-    .addField("The server invite is", "https://Discord.gg/Bots")
+    .addField("The server invite is", "https://Discord.gg/Blank")
     message.channel.sendMessage("Check your DMs")
     message.author.sendEmbed(embed)
   }
@@ -438,7 +438,7 @@ const prefix = config.prefix;
     const embed = new Discord.RichEmbed()
     .setTitle(`Server Info for the server ${message.guild.name}`)
     .setColor(message.guild.me.displayHexColor)
-    .setFooter(`Bot BREH Server Info command on the server ${message.guild.name}`)
+    .setFooter(`C0DE Bot Server Info command on the server ${message.guild.name}`)
     .setDescription("Gives you info on the current server that you are on")
     .addField("Name", message.guild.name, true)
     .addField("Members", message.guild.memberCount, true)
@@ -509,7 +509,7 @@ const prefix = config.prefix;
     }
 superagent
             .post("https://Discordbots.org/api/bots/296079420345810946/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: Bot BREH; +https://www.Discordapp.com")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
             .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });

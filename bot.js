@@ -242,8 +242,11 @@ const prefix = config.prefix;
     .setTitle("Help - Owner")
     .setDescription("Commands for bot owner (C0DE)")
     .setColor(message.guild.me.displayHexColor)
-    .addField("serverinfo", "Gives info of the current server", true)
-    .addField("stats", "Gives the stats of the bot", true))
+    .addField("restart", "Restarts bot", true)
+    .addField("eval", "SP00KY", true)
+			     .addField("setgame", "Sets playing status", true)
+			     .addField("defgame", "Sets game to default status", true)
+    .addField("servers", "displays names of servers", true))
   return;
   } else
       message.channel.sendEmbed(new Discord.RichEmbed()
@@ -256,7 +259,8 @@ const prefix = config.prefix;
       .addField('⚒ Moderation', 'Select by doing ++help moderation')
       .addField('🎉 Fun', "Select by doing ++help fun")
       .addField('ℹ Info', "Select by doing ++help info")
-      .addField('➕ Math', "Select by doing ++help math"));
+      .addField('➕ Math', "Select by doing ++help math")
+				.addField('⌨️ Owner only', "Select by doing ++help owner"));
   }
 
   if (command === "warn"){

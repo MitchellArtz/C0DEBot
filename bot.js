@@ -578,7 +578,7 @@ if(command === "servers") {
 }
 	 if(command === "serversid") {
     if(message.author.id !== config.ownerid) return message.channel.sendMessage("You do not have permission to use this command")
-    message.channel.send(bot.guilds.map(guild => (guild.name) + "\n" (guild.id)))
+    message.channel.send(bot.guilds.map(guild => (guild.name) + \n (guild.id)))
 }
 
 if (command === "sad"){

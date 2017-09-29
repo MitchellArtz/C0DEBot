@@ -444,12 +444,8 @@ const prefix = config.prefix;
 
   if(command === "defgame") {
     if (message.author.id !== config.ownerid) return;
-    bot.user.setPresence({
-        game: {
-            name: `${config.prefix}help | ${bot.guilds.size} servers!`,
-            type: 0
-        }
-    });
+    bot.user.setPresence({("${config.prefix}help | ${bot.guilds.size} servers!", "https://www.twitch.tv/Blank");
+});
   }
 
   if(command === "serverinfo") {

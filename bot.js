@@ -10,7 +10,7 @@ let apitoken = ("process.env.BOT_TOKEN")
 
 bot.on('ready', () => {
     console.log('Logged in as ' + bot.user.tag + ' and I am on ' + bot.guilds.size + ' guilds!')
-    bot.user.setGame("${config.prefix}help | ${bot.guilds.size} servers!", "https://www.twitch.tv/Blank");
+    bot.user.setGame("+{config.prefix}help | +{bot.guilds.size} servers!", "https://www.twitch.tv/Blank");
 });
 
 bot.on("guildCreate", guild => {

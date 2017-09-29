@@ -445,8 +445,7 @@ const prefix = config.prefix;
   if(command === "defgame") {
     if (message.author.id !== config.ownerid) return;
     bot.user.setGame("Prefix is ++", "https://www.twitch.tv/Blank");
-}
-  }
+};
 
   if(command === "serverinfo") {
     const embed = new Discord.RichEmbed()

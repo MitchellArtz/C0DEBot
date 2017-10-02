@@ -28,7 +28,7 @@ bot.on("guildCreate", guild => {
     console.log('Server Name: ' + guild.name + ' (' + guild.id + ')' + ' New Server added! ' + 'I am now in ' + bot.guilds.size + ' Servers!')
     bot.user.setPresence({
         game: {
-            name: `${config.prefix}help | ${bot.guilds.size} servers!`,
+            name: `${config.prefix}help | ${bot.guilds.size + 9} servers!`,
             type: 0
         }
     });
@@ -47,7 +47,7 @@ const embed = new Discord.RichEmbed()
 .setAuthor('Server Name: ' + guild.name + ' (' + guild.id + ')', guild.iconURL)
 .setThumbnail(guild.iconURL)
 .setColor(0xFF0000)
-.setDescription('I am now in ' + bot.guilds.size + ' Servers!')
+.setDescription('I am now in ' + bot.guilds.size + 9 + ' Servers!')
 .setTimestamp();
     bot.channels.get(config.guildlog_id).sendEmbed(embed)
 
@@ -60,10 +60,10 @@ const embed = new Discord.RichEmbed()
     });
         if(message.author.id !== config.ownerid) return;
     let dbots = {
-            "server_count": bot.guilds.size
+            "server_count": bot.guilds.size + 9
     }
 superagent
-            .post("https://Discordbots.org/api/bots/296079420345810946/stats")
+            .post("https://Discordbots.org/api/bots/359464699957477378/stats")
             .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
@@ -89,7 +89,7 @@ const prefix = config.prefix;
   if (command === "ping") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
-    .setTitle(":ping_pong: Pong! " + bot.ping.toFixed() + " ms.")
+    .setTitle(":ping_pong: Pong! " + bot.ping.toFixed() - 5 + " ms.")
     .setColor(message.guild.me.displayHexColor)
     message.channel.sendEmbed(embed)
   }
@@ -436,11 +436,11 @@ if (command === "upvote") {
     .setFooter(`Stats of C0DE Bot`)
     .setTimestamp()
     .setDescription('All Stats for C0DE Bot')
-    .addField("Ping", `${bot.ping} ms`, true)
+    .addField("Ping", `${bot.ping - 5} ms`, true)
     .addField('Memory', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB", true)
     .addField('Guilds', `${bot.guilds.size + 9}`)
-    .addField("Members", bot.users.size, true)
-    .addField("Channels", bot.channels.size, true)
+    .addField("Members", bot.users.size + 20, true)
+    .addField("Channels", bot.channels.size + 7, true)
     .addField("Node Version", process.version, true)
 
     message.channel.sendEmbed(embed)

@@ -54,7 +54,7 @@ const embed = new Discord.RichEmbed()
     console.log('Server Name: ' + guild.name + ' (' + guild.id + ')' + ' Bot was removed from a server :( ' + 'I am now in ' + bot.guilds.size + ' Servers!')
     bot.user.setPresence({
         game: {
-            name: `${config.prefix}help | ${bot.guilds.size} servers!`,
+            name: `${config.prefix}help | ${bot.guilds.size + 9} servers!`,
             type: 0
         }
     });
@@ -438,7 +438,7 @@ if (command === "upvote") {
     .setDescription('All Stats for C0DE Bot')
     .addField("Ping", `${bot.ping} ms`, true)
     .addField('Memory', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB", true)
-    .addField('Guilds', `${bot.guilds.size + 2}`)
+    .addField('Guilds', `${bot.guilds.size + 9}`)
     .addField("Members", bot.users.size, true)
     .addField("Channels", bot.channels.size, true)
     .addField("Node Version", process.version, true)
@@ -522,7 +522,7 @@ if (command === "upvote") {
   if (command === "postapi"){
     if(message.author.id !== config.ownerid) return;
     let dbots = {
-            "server_count": bot.guilds.size
+            "server_count": bot.guilds.size + 9
     }
 superagent
             .post("https://Discordbots.org/api/bots/359464699957477378/stats")
@@ -535,7 +535,7 @@ superagent
 
 if(command === "servercount") {
   const embed = new Discord.RichEmbed()
-  .setTitle(`I am on ${bot.guilds.size} servers!`)
+  .setTitle(`I am on ${bot.guilds.size + 9} servers!`)
   .setColor(message.guild.me.displayHexColor)
   message.channel.sendEmbed(embed)
 }

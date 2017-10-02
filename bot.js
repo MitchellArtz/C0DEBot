@@ -31,7 +31,7 @@ bot.on("guildCreate", guild => {
             name: `${config.prefix}help | ${bot.guilds.size} servers!`,
             type: 0
         }
-    });
+    })
 
 bot.on("guildDelete", guild => {
 const embed = new Discord.RichEmbed()

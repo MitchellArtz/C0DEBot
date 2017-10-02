@@ -37,7 +37,7 @@ superagent
             .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
-            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
+            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { console.log.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
         message.reply("Posted API Successfully")
 });
 

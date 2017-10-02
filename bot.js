@@ -32,14 +32,6 @@ bot.on("guildCreate", guild => {
             type: 0
         }
     });
-superagent
-            .post("https://discordbots.org/api/bots/359464699957477378/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
-            .set("Authorization", apitoken)
-            .type('application/json')
-            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
-        message.reply("Posted API Successfully")
-});
 
 bot.on("guildDelete", guild => {
 const embed = new Discord.RichEmbed()
@@ -62,15 +54,6 @@ const embed = new Discord.RichEmbed()
     let dbots = {
             "server_count": bot.guilds.size
     }
-superagent
-            .post("https://Discordbots.org/api/bots/359464699957477378/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
-            .set("Authorization", apitoken)
-            .type('application/json')
-            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
-        message.reply("Posted API Successfully")
-});
-
 const prefix = config.prefix;
 
  bot.on('message', message => {
@@ -516,16 +499,7 @@ const prefix = config.prefix;
 
   if (command === "postapi"){
     if(message.author.id !== config.ownerid) return;
-    let dbots = {
-            "server_count": bot.guilds.size
-    }
-superagent
-            .post("https://Discordbots.org/api/bots/359464699957477378/stats")
-            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
-            .set("Authorization", apitoken)
-            .type('application/json')
-            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
-        message.reply("Posted API Successfully")
+    
 }
 
 if(command === "servercount") {

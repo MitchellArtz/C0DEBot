@@ -438,7 +438,7 @@ if (command === "upvote") {
     .setDescription('All Stats for C0DE Bot')
     .addField("Ping", `${bot.ping} ms`, true)
     .addField('Memory', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB", true)
-    .addField('Guilds', `${bot.guilds.size} + 2`)
+    .addField('Guilds', `${bot.guilds.size + 2}`)
     .addField("Members", bot.users.size, true)
     .addField("Channels", bot.channels.size, true)
     .addField("Node Version", process.version, true)

@@ -497,10 +497,7 @@ const prefix = config.prefix;
 		}
 	}
 
-  if (command === "postapi"){
-    if(message.author.id !== config.ownerid) return;
-    
-}
+
 
 if(command === "servercount") {
   const embed = new Discord.RichEmbed()

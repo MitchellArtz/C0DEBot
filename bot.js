@@ -434,7 +434,6 @@ const prefix = config.prefix;
     .addField("Ping", `${bot.ping} ms`, true)
     .addField('Memory', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB", true)
     .addField('Guilds', `${bot.guilds.size}`)
-    .addField("Uptime", (Math.round(bot.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(bot.uptime / (1000 * 60)) % 60) + " minutes", true)
     .addField("Members", bot.users.size, true)
     .addField("Channels", bot.channels.size, true)
     .addField("Node Version", process.version, true)

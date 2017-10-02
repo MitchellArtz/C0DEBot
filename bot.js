@@ -118,6 +118,10 @@ const prefix = config.prefix;
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
    message.channel.sendMessage('(╯°□°）╯︵ ┻━┻');
  }
+if (command === "upvote") {
+    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
+   message.channel.sendMessage('https://discordbots.org/bot/359464699957477378');
+ }
 
  if (command === "say") {
    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
@@ -181,6 +185,7 @@ const prefix = config.prefix;
 	.addField("invite", "Invite this bot to your server", true)
 			     
 			      .addField("id", "Gets your id", true)
+			      .addField("upvote", "Please upvote this bot", true)
 			      .addField("servericon", "Gives current icon for the server", true))
         
     return;

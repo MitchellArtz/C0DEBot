@@ -6,11 +6,11 @@ const Jimp = require('jimp');
 var blacklisted = require("./blacklisted.json").blacklisted
 var admin_ids = require("./admins.json").admin_ids;
 var config = require("./config.json")
-let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DLQ1jw.qyvNKQcifk0cmxP5SNbgV9TI-9E")
+let apitoken = ("process.env.BOT_TOKEN")
 
 bot.on('ready', () => {
     console.log('Logged in as ' + bot.user.tag + ' and I am on ' + bot.guilds.size + ' guilds!')
-    bot.user.setGame("Prefix is ++", "https://www.twitch.tv/Blank")
+    bot.user.setGame("Prefix is ++", "https://www.twitch.tv/Blank");
 });
 
 bot.on("guildCreate", guild => {
@@ -22,7 +22,7 @@ bot.on("guildCreate", guild => {
   .setColor(0x428CF4)
   .setDescription('I am now in ' + bot.guilds.size + ' Servers!')
   .setTimestamp();
-    bot.channels.get(config.guildlog_id).sendEmbed(embed)
+   bot.channels.get(config.guildlog_id).sendEmbed(embed)
     
     console.log(`Guild added: ${guild.name}, Owned by: ${guild.owner.user.username}#${guild.owner.user.discriminator}. I'm on ${bot.guilds.size} Guilds now`)
     console.log('Server Name: ' + guild.name + ' (' + guild.id + ')' + ' New Server added! ' + 'I am now in ' + bot.guilds.size + ' Servers!')
@@ -31,7 +31,15 @@ bot.on("guildCreate", guild => {
             name: `${config.prefix}help | ${bot.guilds.size} servers!`,
             type: 0
         }
-    })
+    });
+superagent
+            .post("https://discordbots.org/api/bots/359464699957477378/stats")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
+            .set("Authorization", apitoken)
+            .type('application/json')
+            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
+        message.reply("Posted API Successfully")
+});
 
 bot.on("guildDelete", guild => {
 const embed = new Discord.RichEmbed()
@@ -49,11 +57,20 @@ const embed = new Discord.RichEmbed()
             name: `${config.prefix}help | ${bot.guilds.size} servers!`,
             type: 0
         }
-    })
+    });
         if(message.author.id !== config.ownerid) return;
     let dbots = {
             "server_count": bot.guilds.size
     }
+superagent
+            .post("https://Discordbots.org/api/bots/296079420345810946/stats")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
+            .set("Authorization", apitoken)
+            .type('application/json')
+            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
+        message.reply("Posted API Successfully")
+});
+
 const prefix = config.prefix;
 
  bot.on('message', message => {
@@ -497,7 +514,19 @@ const prefix = config.prefix;
 		}
 	}
 
-
+  if (command === "postapi"){
+    if(message.author.id !== config.ownerid) return;
+    let dbots = {
+            "server_count": bot.guilds.size
+    }
+superagent
+            .post("https://Discordbots.org/api/bots/296079420345810946/stats")
+            .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
+            .set("Authorization", apitoken)
+            .type('application/json')
+            .send(JSON.stringify(dbots)).end((err,res) => { if (err) { Logging.err("Failed to post statistics to Discordbots.org"); Logging.err(err); Logging.err(res.text); } });
+        message.reply("Posted API Successfully")
+}
 
 if(command === "servercount") {
   const embed = new Discord.RichEmbed()

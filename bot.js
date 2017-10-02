@@ -49,7 +49,7 @@ const embed = new Discord.RichEmbed()
             name: `${config.prefix}help | ${bot.guilds.size} servers!`,
             type: 0
         }
-    });
+    })
         if(message.author.id !== config.ownerid) return;
     let dbots = {
             "server_count": bot.guilds.size

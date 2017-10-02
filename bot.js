@@ -11,7 +11,7 @@ let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DLQ1jw.qyvNKQcifk0cmxP5SNbgV9TI-9E")
 bot.on('ready', () => {
     console.log('Logged in as ' + bot.user.tag + ' and I am on ' + bot.guilds.size + ' guilds!')
     bot.user.setGame("Prefix is ++", "https://www.twitch.tv/Blank");
-});
+})
 
 bot.on("guildCreate", guild => {
   const embed = new Discord.RichEmbed()

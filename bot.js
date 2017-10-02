@@ -522,7 +522,7 @@ if (command === "upvote") {
   if (command === "postapi"){
     if(message.author.id !== config.ownerid) return;
     let dbots = {
-            "server_count": bot.guilds.size
+            "server_count": "22"
     }
 superagent
             .post("https://Discordbots.org/api/bots/359464699957477378/stats")

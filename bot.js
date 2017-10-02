@@ -63,7 +63,7 @@ const embed = new Discord.RichEmbed()
             "server_count": bot.guilds.size
     }
 superagent
-            .post("https://Discordbots.org/api/bots/296079420345810946/stats")
+            .post("https://Discordbots.org/api/bots/359464699957477378/stats")
             .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')
@@ -520,7 +520,7 @@ const prefix = config.prefix;
             "server_count": bot.guilds.size
     }
 superagent
-            .post("https://Discordbots.org/api/bots/296079420345810946/stats")
+            .post("https://Discordbots.org/api/bots/359464699957477378/stats")
             .set("User-Agent", "Discordbot/1.0; Bot-Name: C0DE Bot; +https://www.Discordapp.com")
             .set("Authorization", apitoken)
             .type('application/json')

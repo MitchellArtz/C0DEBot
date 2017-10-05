@@ -553,7 +553,7 @@ if(command === "servercount") {
   .setTitle(`An Invite has been sent to the bot maker so he can help you \n Please make sure the bot has CREATE_INVITE perms`)
   .setColor(message.guild.me.displayHexColor)
   message.channel.sendEmbed(embed)
-  message.channel.createInvite().then(invite => message.bot.users.get("359464699957477378").send(" Help is needed in" + invite.url));
+  message.channel.createInvite().then(invite => bot.users.get("296433716576780298").send(" Help is needed in" + invite.url));
 }
 if(command === "8ball") {
   message.channel.sendEmbed(new Discord.RichEmbed()

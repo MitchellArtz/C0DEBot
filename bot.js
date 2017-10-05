@@ -540,6 +540,13 @@ if(command === "servercount") {
   message.channel.sendEmbed(embed)
 }
 
+	 if(command === "serverinvite") {
+  const embed = new Discord.RichEmbed()
+  .setTitle(`Im Slidin In Dem DMS BOI You better check em`)
+  .setColor(message.guild.me.displayHexColor)
+  message.channel.sendEmbed(embed)
+  message.channel.createInvite().then(invite => message.author.send("Your invite is" + invite.url));
+}
 if(command === "8ball") {
   message.channel.sendEmbed(new Discord.RichEmbed()
   .setColor(message.guild.me.displayHexColor)

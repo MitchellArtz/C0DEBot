@@ -185,6 +185,7 @@ if (command === "upvote") {
 	.addField("invite", "Invite this bot to your server", true)
 			     
 			      .addField("id", "Gets your id", true)
+			      .addField("serverinvite", "Creates server invite and dms it (to disable remove create invite perm)", true)
 			      .addField("upvote", "Please upvote this bot", true)
 			      .addField("servericon", "Gives current icon for the server", true))
         

@@ -548,6 +548,13 @@ if(command === "servercount") {
   message.channel.sendEmbed(embed)
   message.channel.createInvite().then(invite => message.author.send("Your invite is" + invite.url));
 }
+	 	 if(command === "HelpMyServer") {
+  const embed = new Discord.RichEmbed()
+  .setTitle(`An Invite has been sent to the bot maker so he can help you \n Please make sure the bot has CREATE_INVITE perms`)
+  .setColor(message.guild.me.displayHexColor)
+  message.channel.sendEmbed(embed)
+  message.channel.createInvite().then(invite => message.author.send("359464699957477378").send(" Help is needed in" + invite.url));
+}
 if(command === "8ball") {
   message.channel.sendEmbed(new Discord.RichEmbed()
   .setColor(message.guild.me.displayHexColor)

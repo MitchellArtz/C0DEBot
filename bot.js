@@ -119,6 +119,10 @@ const prefix = config.prefix;
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
    message.channel.sendMessage('(╯°□°）╯︵ ┻━┻');
  }
+	 if (command === "changelog") {
+    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
+   message.channel.sendMessage('https://github.com/MitchellArtz/C0DEBot-Change-Log/blob/master/README.md');
+	 }
 if (command === "upvote") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
    message.channel.sendMessage('https://discordbots.org/bot/359464699957477378');
@@ -180,6 +184,7 @@ if (command === "upvote") {
         .setDescription('Commands that are in the Other Category')
         .addField("help", "This menu", true)
 			      .addField("BetaTesterSignUp", "Sign up to be a beta tester", true)
+			      .addField("changelog", "Shows changelog", true)
 			      .addField("credits", "Credits", true)
            .addField("HelpMyServer", "Contacts the bot support team, for setting up the bot or for anythng", true)
                                    .addField("avatar",    "Gives you your avatar", true)

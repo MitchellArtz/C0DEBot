@@ -128,10 +128,6 @@ if (command === "upvote") {
    message.channel.sendMessage('https://discordbots.org/bot/359464699957477378');
  }
 
- if (command === "say") {
-   if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendEmbed(new Discord.RichEmbed().setTitle(args.join(" ")).setColor(message.guild.me.displayHexColor));
- }
 
  if (command === "add") {
    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
@@ -233,7 +229,7 @@ if (command === "upvote") {
 			       .addField("RPS", "Rock Paper Scissors", true)
 			       .addField("HoT", "Heads Or Tails", true)
         .addField("randuser", "Replies with a random bot (Great for giveaways)", true)
-			       .addField("say", "Repeats what you said", true)
+			       
       .addField("8ball", "Put a question and it will tell you the truth", true))
   return;
   } else

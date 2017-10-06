@@ -574,6 +574,12 @@ if(command === "8ball") {
   .setColor(message.guild.me.displayHexColor)
   .setTitle('🎱 Your answer is: ' + doMagic8BallVoodoo()));
 }
+if(command === "RPS") {
+  message.channel.sendEmbed(new Discord.RichEmbed()
+  .setColor(message.guild.me.displayHexColor)
+  .setTitle(' I Pick: ' + DoRockPaperScissors()));
+}
+
 
 if (command === "credits") {
   const embed = new Discord.RichEmbed()
@@ -713,6 +719,11 @@ if (typeof(text) === "string")
 
 function doMagic8BallVoodoo() {
         var rand = ['Yes', 'No', 'It is certain.', 'What do you think? NO', 'Maybe', 'Never', 'Yep', 'In the future.', 'Well. I cant think right now', 'NAH BRUH'];
+
+        return rand[Math.floor(Math.random()*rand.length)];
+}
+function DoRockPaperScissors() {
+        var rand = ['Rock', 'Paper', 'Scissors'];
 
         return rand[Math.floor(Math.random()*rand.length)];
 }

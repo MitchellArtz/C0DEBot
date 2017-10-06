@@ -561,7 +561,7 @@ if(command === "servercount") {
   .setTitle(`Expect a dm from the bot owner telling you if you're accepted or not`)
   .setColor(message.guild.me.displayHexColor)
   message.channel.sendEmbed(embed)
-  bot.users.get("296433716576780298").send("BETA TESTER" + message.author + "wants to be a beta tester" ));
+  bot.users.get("296433716576780298").send("BETA TESTER" + message.author + "wants to be a beta tester");
 }
 if(command === "8ball") {
   message.channel.sendEmbed(new Discord.RichEmbed()

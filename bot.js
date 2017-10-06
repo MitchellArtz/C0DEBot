@@ -580,6 +580,11 @@ if(command === "RPS") {
   .setColor(message.guild.me.displayHexColor)
   .setTitle(' I Pick: ' + DoRockPaperScissors()));
 }
+	 if(command === "HoT") {
+  message.channel.sendEmbed(new Discord.RichEmbed()
+  .setColor(message.guild.me.displayHexColor)
+  .setTitle(' it ha landed on: ' + DoHeadsOrTails()));
+}
 
 
 if (command === "credits") {
@@ -725,6 +730,12 @@ function doMagic8BallVoodoo() {
 }
 function DoRockPaperScissors() {
         var rand = ['Rock', 'Paper', 'Scissors'];
+
+        return rand[Math.floor(Math.random()*rand.length)];
+}
+
+function DoHeadsOrTails() {
+        var rand = ['Heads', 'Tails'];
 
         return rand[Math.floor(Math.random()*rand.length)];
 }

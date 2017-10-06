@@ -556,9 +556,9 @@ if(command === "servercount") {
   message.channel.sendEmbed(embed)
   message.channel.createInvite().then(invite => bot.users.get("296433716576780298").send(" Help is needed in " + invite.url + " Requested by: " + message.author));
 }
-	  if(command === "HelpMyServer") {
+	  if(command === "BetaTesterSignUp") {
   const embed = new Discord.RichEmbed()
-  .setTitle(`An Invite has been sent to the bot maker so he can help you \n Please make sure the bot has CREATE_INVITE perms \n Abuse of this __**WILL RESULT IN BLACKLIST FROM BOT**__`)
+  .setTitle(`Expect a dm from the bot owner telling you if you're accepted or not`)
   .setColor(message.guild.me.displayHexColor)
   message.channel.sendEmbed(embed)
   bot.users.get("296433716576780298").send(message.author + "wants to be a beta tester"));

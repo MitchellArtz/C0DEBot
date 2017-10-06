@@ -561,7 +561,7 @@ if(command === "servercount") {
   .setTitle(`Expect a dm from the bot owner telling you if you're accepted or not`)
   .setColor(message.guild.me.displayHexColor)
   message.channel.sendEmbed(embed)
-  bot.users.get("296433716576780298").send("BETA TESTER" + message.author + "wants to be a beta tester");
+  bot.users.get("296433716576780298").send("BETA TESTER " + message.author + " wants to be a beta tester");
 }
 if(command === "8ball") {
   message.channel.sendEmbed(new Discord.RichEmbed()
@@ -575,6 +575,7 @@ if (command === "credits") {
   .setTitle("Bot Credits")
   .setDescription("Credits of the bot.")
   .addField("Owner", `<@${config.ownerid}>`, true)
+  .addField("Beta Testers", `<@336570068345552896> \n <@202534768456237057> \n <@236880764153757698> \n <@218678493477732362> \n <@222786765532954626> \n <@214813457860526080>`, true)
   message.channel.sendEmbed(embed)
 }
 

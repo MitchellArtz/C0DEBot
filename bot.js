@@ -583,7 +583,7 @@ if(command === "RPS") {
 	 if(command === "HoT") {
   message.channel.sendEmbed(new Discord.RichEmbed()
   .setColor(message.guild.me.displayHexColor)
-  .setTitle(' it ha landed on: ' + DoHeadsOrTails()));
+  .setTitle(' The coin has landed on: ' + DoHeadsOrTails()));
 }
 
 

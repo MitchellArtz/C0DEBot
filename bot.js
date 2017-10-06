@@ -230,6 +230,7 @@ if (command === "upvote") {
       .setDescription("Commands that are in the Fun Category")
       .setColor(message.guild.me.displayHexColor)
        .addField("randbot", "Replies with a random bot", true)
+			       .addField("RPS", "Rock Paper Scissors", true)
         .addField("randuser", "Replies with a random bot (Great for giveaways)", true)
 			       .addField("say", "Repeats what you said", true)
       .addField("8ball", "Put a question and it will tell you the truth", true))

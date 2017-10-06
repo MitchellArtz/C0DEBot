@@ -180,7 +180,7 @@ if (command === "upvote") {
         .setDescription('Commands that are in the Other Category')
         .addField("help", "This menu", true)
 			      .addField("credits", "Credits", true)
-           
+           .addField("HelpMyServer", "Contacts the bot support team, for setting up the bot or for anythng", true)
                                    .addField("avatar",    "Gives you your avatar", true)
 	.addField("ping", "Ping pong and shows response time", true)
 	.addField("invite", "Invite this bot to your server", true)

@@ -87,7 +87,7 @@ const prefix = config.prefix;
          return;
      }
 	if (message.content.startsWith("++" + 'ban')) {
-    let userToBan = message.mentions.members.first()
+    let userToBan = message.guild.member(user).ban()
     let reason = message.content.split(" ").slice(2).join(" ")
 
     if (!message.member.permissions.has("BAN_MEMBERS")) {
@@ -114,7 +114,7 @@ const prefix = config.prefix;
             icon_url: message.author.avatarURL
           },
           url: '',
-          description: `**Action:** Ban\n**Member:** ${userToBan.tag} (${userToBan.id})\n**Reason:** ${reason}`,
+          description: `**Action:** Ban\n**Member:** ${message.mentions.users.first().tag} (${userToBan.id})\n**Reason:** ${reason}`,
           }
         });
   }

@@ -394,26 +394,6 @@ if (command === "upvote") {
        message.channel.sendMessage("Successfully kicked " + user + " for " + "\"" + reason + "\"!")
        console.log(message.author.tag + ' (' + message.author.id + ') ' + ' has kicked ' + user + ' for ' + "\"" + reason + "\"");
    }
-   if (command === "ban"){
-
-             let staffRole = message.guild.roles.find("name", config.admin_role);
-             if (!message.member.roles.has(staffRole.id)) {
-                 return message.channel.sendMessage("You do not have permission to use this command.")
-             }
-         let reason = args.splice(1).join(' ');
-         let user = message.mentions.users.first();
-         let modlog = bot.channels.find('name', 'mod-log');
-         if (!staffRole) return message.channel.sendMessage("No Roles Found: " + "\"" + config.admin_role + "\"");
-         if (reason.length < 1) return message.channel.sendMessage('You must give the reason to ban the person.');
-         if (message.mentions.users.size < 1) return message.channel.sendMessage("You must mention the user you are going to ban.").catch(console.error);
-
-         if (!message.guild.member(user).bannable) return message.channel.sendMessage("I cannot ban that member (Higher Role?)");
-         message.guild.member(user).ban();
-
-         message.channel.sendMessage("Successfully banned " + user + " for " + "\"" + reason + "\"!")
-         console.log(message.author.tag + ' (' + message.author.id + ') ' + ' has banned ' + user + ' for ' + "\"" + reason + "\"");
-  }
-
 
 
      if(command === "avatar") {

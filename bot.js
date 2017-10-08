@@ -86,20 +86,38 @@ const prefix = config.prefix;
          message.reply('I cannot respond with DMs!')
          return;
      }
-	 if (command === "ping") {
-    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-	 let args = message.content.split(" ").slice(1);
-module.exports.run = async (bot, message, args) => {
-    if (!message.member.permissions.has("BAN_MEMBERS")) return message.reply('You aren\'t an admin!');
-          let member = message.mentions.members.first();
-          if (!member) return message.reply('Invalid Usage, please do ;ban `@User#1234 <time>`');
-          member.ban({
-            days: args[1],
-            reason: `banned by ${message.author.tag}`
-          });
-}
+	if (message.content.startsWith("++" + 'ban')) {
+    let userToBan = message.mentions.members.first()
+    let reason = message.content.split(" ").slice(2).join(" ")
 
+    if (!message.member.permissions.has("BAN_MEMBERS")) {
+      return message.channel.send("Uh oh! Looks like you don't have the required permissions to be able to execute this command.")
+    } else if (!message.guild.member(client.user).permissions.has("BAN_MEMBERS")) {
+      return message.channel.send("Uh oh! I don't have the required permissions to be able to execute this command.")
+    }
 
+    if (userToBan === client.user) {
+      return message.reply(`I can't ban myself.`)
+    }
+
+    if (message.mentions.users.size === 0) {
+      return message.channel.send("Please provide a user to ban!")
+    }
+
+    userToBan.ban()
+    message.channel.send("Success!")
+    message.channel.send('', {
+        embed: {
+          color: 0xff0202,
+          author: {
+            name: message.author.tag,
+            icon_url: message.author.avatarURL
+          },
+          url: '',
+          description: `**Action:** Ban\n**Member:** ${userToBan.tag} (${userToBan.id})\n**Reason:** ${reason}`,
+          }
+        });
+  }
 
 	 
   if (command === "ping") {

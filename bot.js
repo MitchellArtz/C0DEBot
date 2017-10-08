@@ -108,13 +108,13 @@ const prefix = config.prefix;
     message.channel.send("Success!")
     message.channel.send('', {
         embed: {
-          color: 0xff0202,
+          color: 0xff6347,
           author: {
             name: message.author.tag,
             icon_url: message.author.avatarURL
           },
           url: '',
-          description: `**Action:** Ban\n**Member:** ${userToBan.user.tag} + (${userToBan.id})\n**Reason:** ${reason}`,
+          description: `**Action:** Ban\n**Member:** ${userToBan.user.tag}  (${userToBan.id})\n**Reason:** ${reason}`,
           }
         });
   }
@@ -141,7 +141,7 @@ const prefix = config.prefix;
     message.channel.send("Success!")
     message.channel.send('', {
         embed: {
-          color: 0xff0202,
+          color: 0xff6347,
           author: {
             name: message.author.tag,
             icon_url: message.author.avatarURL

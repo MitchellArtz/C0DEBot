@@ -98,7 +98,7 @@ const prefix = config.prefix;
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
     .setTitle("__**ALERT ALERT! SERVER ON LOCKDOWN EVERYONE HIDE**__ *Dials 911* \n *does 9/11*")
-    .setColor(#FF0000)
+    .setColor(FF0000)
     message.channel.sendEmbed(embed)
   }
 

@@ -114,7 +114,7 @@ const prefix = config.prefix;
             icon_url: message.author.avatarURL
           },
           url: '',
-          description: `**Action:** Ban\n**Member:** ${message.mentions.users.first().tag} (${userToBan.id})\n**Reason:** ${reason}`,
+          description: `**Action:** Ban\n**Member:** message.mentions.users.first().tag + (${userToBan.id})\n**Reason:** ${reason}`,
           }
         });
   }

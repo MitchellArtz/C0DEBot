@@ -270,9 +270,7 @@ if (command === "upvote") {
       .setDescription('Commands that are in the Moderation Category')
       .addField('kick', 'Kicks the user', true)
       .addField('ban', 'Bans the user', true)
-      .addField('purge', 'Purges messages', true)
-      .addField('mute', 'Mutes the user', true)
-      .addField('unmute', 'Unmutes the user', true))
+      .addField('purge', 'Purges messages', true))
     return;
     } else
     if(category === "math") {
@@ -340,73 +338,6 @@ if (command === "upvote") {
 				.addField('⌨️ Owner only', "Select by doing ++help owner"));
   }
 
-  if (command === "warn"){
-
-           let staffRole = message.guild.roles.find("name", config.moderator_role);
-           if (!message.member.roles.has(staffRole.id)) {
-               return message.channel.sendMessage("You do not have permission to use this command.")
-           }
-       let reason = args.splice(1).join(' ');
-       let user = message.mentions.users.first();
-       let modlog = bot.channels.find('name', 'mod-log');
-       if (!staffRole) return message.channel.sendMessage("No Roles Found: Moderator");
-       if (!modlog) return message.channel.sendMessage("No Channel Found: #mod-log");
-       if (reason.length < 1) return message.channel.sendMessage('You must give the reason to warn the person.');
-       if (message.mentions.users.size < 1) return message.channel.sendMessage("You must mention the user you are going to warn.").catch(console.error);
-
-       message.channel.sendMessage("Successfully warned " + user + " for " + "\"" + reason + "\"!")
-       console.log(message.author.tag + ' (' + message.author.id + ') ' + 'has warned ' + user + ' for ' + reason);
-   }
-
-   if (command === "mute"){
-
-     let staffRole = message.guild.roles.find("name", "Moderator", "Adminstrator", "Owner", "Co-Owner", "Owners", "owner");
-     if (!message.member.roles.has(staffRole.id)) {
-       return message.channel.sendMessage("You do not have permission to use this command.")
-     }
-   let reason = args.splice(1).join(' ');
-   let user = message.mentions.users.first();
-   let modlog = bot.channels.find('name', 'mod-log');
-   let muteRole = bot.guilds.get(message.guild.id).roles.find('name', 'Muted');
-   if (!modlog) return message.channel.sendMessage("No Channel Found: #mod-log");
-   if (!staffRole) return message.channel.sendMessage("No Roles Found: Moderator");
-   if (!muteRole) return message.channel.sendMessage("No Roles Found: Muted");
-   if (reason.length < 1) return message.channel.sendMessage('You must give the reason to mute the person.');
-   if (message.mentions.users.size < 1) return message.channel.sendMessage("You must mention the user you are going to mute.").catch(console.error);
-   console.log(message.author.tag + ' (' + message.author.id + ') ' + 'has muted ' + user + ' for ' + reason);
-   if(!message.guild.member(bot.user).hasPermission("ADMINISTRATOR")) return message.channel.sendMessage("No Permissions: ADMINISTATOR").catch(console.error);
-
-   if (message.member.roles.has(muteRole.id)) {
-     message.channel.sendMessage("Sorry, That user is already muted, please use ==unmute to unmute them.")
-   } else {
-     message.guild.member(user).addRole(muteRole).then(() =>{
-       bot.channels.get(modlog.id).sendEmbed(embed);
-       message.channel.sendMessage("Successfully muted " + user + " for " + "\"" + reason + "\"!")
-     });
-   }
- }
-
- if (command === "unmute"){
-
-     let staffRole = message.guild.roles.find("name", "Moderator", "Adminstrator", "Owner", "Co-Owner", "Owners", "owner");
-     if (!message.member.roles.has(staffRole.id)) {
-       return message.channel.sendMessage("You do not have permission to use this command.")
-     }
-   let user = message.mentions.users.first();
-   let modlog = bot.channels.find('name', 'mod-log');
-   let muteRole = bot.guilds.get().roles.find('name', 'Muted');
-   if (!modlog) return message.channel.sendMessage("No Channel Found: #mod-log");
-   if (!staffRole) return message.channel.sendMessage("No Roles Found: Moderator");
-   if (!muteRole) return message.channel.sendMessage("No Roles Found: Muted");
-   if (message.mentions.users.size < 1) return message.channel.sendMessage("You must mention the user you are going to unmute.").catch(console.error);
-   console.log(message.author.tag + ' (' + message.author.id + ') ' + 'has unmuted ' + user);
-   if(!message.guild.member(bot.user).hasPermission("ADMINISTRATOR")) return message.channel.sendMessage("No Permissions: ADMINISTRATOR").catch(console.error);
-
-     message.guild.member(user).removeRole(muteRole).then(() =>{
-       message.channel.sendMessage("Successfully unmuted " + user + "!");
-       bot.channels.get(modlog.id).sendEmbed(embed);
-     });
- }
 
 
 

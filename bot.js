@@ -92,11 +92,11 @@ const prefix = config.prefix;
 
     if (!message.member.permissions.has("BAN_MEMBERS")) {
       return message.channel.send("Uh oh! Looks like you don't have the required permissions to be able to execute this command.")
-    } else if (!message.guild.member(client.user).permissions.has("BAN_MEMBERS")) {
+    } else if (!message.guild.member(bot.user).permissions.has("BAN_MEMBERS")) {
       return message.channel.send("Uh oh! I don't have the required permissions to be able to execute this command.")
     }
 
-    if (userToBan === client.user) {
+    if (userToBan === bot.user) {
       return message.reply(`I can't ban myself.`)
     }
 

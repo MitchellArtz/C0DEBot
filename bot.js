@@ -119,6 +119,39 @@ const prefix = config.prefix;
         });
   }
 
+	 if (message.content.startsWith("++" + 'kick')) {
+    let userToKick = message.mentions.members.first()
+    let reason = message.content.split(" ").slice(2).join(" ")
+
+    if (!message.member.permissions.has("KICK_MEMBERS")) {
+      return message.channel.send("Uh oh! Looks like you don't have the required permissions to be able to execute this command.")
+    } else if (!message.guild.member(bot.user).permissions.has("KICK_MEMBERS")) {
+      return message.channel.send("Uh oh! I don't have the required permissions to be able to execute this command.")
+    }
+
+    if (userToKick === bot.user) {
+      return message.reply(`I can't kick myself.`)
+    }
+
+    if (message.mentions.users.size === 0) {
+      return message.channel.send("Please provide a user to kick!")
+    }
+
+    userToKick.kick()
+    message.channel.send("Success!")
+    message.channel.send('', {
+        embed: {
+          color: 0xff0202,
+          author: {
+            name: message.author.tag,
+            icon_url: message.author.avatarURL
+          },
+          url: '',
+          description: `**Action:** Kick\n**Member:** ${userToKick.tag} (${userToKick.id})\n**Reason:** ${reason}`,
+          }
+        });
+  }
+
 	 
   if (command === "ping") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
@@ -375,25 +408,6 @@ if (command === "upvote") {
      });
  }
 
- if (command === "kick"){
-
-           let staffRole = message.guild.roles.find("name", config.moderator_role);
-           if (!message.member.roles.has(staffRole.id)) {
-               return message.channel.sendMessage("You do not have permission to use this command.")
-           }
-       let reason = args.splice(1).join(' ');
-       let user = message.mentions.users.first();
-       let modlog = bot.channels.find('name', 'mod-log');
-       if (!staffRole) return message.channel.sendMessage("No Roles Found: " + "\"" + config.moderator_role + "\"")
-       if (reason.length < 1) return message.channel.sendMessage('You must give the reason to kick the person.');
-       if (message.mentions.users.size < 1) return message.channel.sendMessage("You must mention the user you are going to kick.").catch(console.error);
-
-       if (!message.guild.member(user).kickable) return message.channel.sendMessage("I cannot kick that member (Higher Role?)");
-       message.guild.member(user).kick();
-
-       message.channel.sendMessage("Successfully kicked " + user + " for " + "\"" + reason + "\"!")
-       console.log(message.author.tag + ' (' + message.author.id + ') ' + ' has kicked ' + user + ' for ' + "\"" + reason + "\"");
-   }
 
 
      if(command === "avatar") {

@@ -94,6 +94,14 @@ const prefix = config.prefix;
     .setColor(message.guild.me.displayHexColor)
     message.channel.sendEmbed(embed)
   }
+	 if (command === "SPINO") {
+    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
+    const embed = new Discord.RichEmbed()
+    .setTitle("__**ALERT ALERT!**__ \n __**SERVER ON LOCKDOWN**__ \n __**EVERYONE HIDE**__ \n *Dails 911* \n *does 9/11")
+    .setColor(message.guild.me.displayHexColor)
+    message.channel.sendEmbed(embed)
+  }
+
 
   if (command === "whoami") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");

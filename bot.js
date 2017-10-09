@@ -269,8 +269,7 @@ if (command === "upvote") {
       .setColor(message.guild.me.displayHexColor)
       .setDescription('Commands that are in the Moderation Category')
       .addField('kick', 'Kicks the user', true)
-      .addField('ban', 'Bans the user', true)
-      .addField('purge', 'Purges messages', true))
+      .addField('ban', 'Bans the user', true))
     return;
     } else
     if(category === "math") {

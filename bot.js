@@ -337,6 +337,19 @@ if (command === "upvote") {
 				.addField('⌨️ Owner only', "Select by doing ++help owner"));
   }
 
+	  if (command === "purge") {
+    if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
+	 const deleteCount = parseInt(args[1]);
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You need Manage Messages permission to purge.");
+        if (!message.guild.me.hasPermission("MANAGAE_MESSAGES")) return message.reply("I don't have permission to manage messages.")
+        if (!deleteCount || deleteCount < 2 || deleteCount > 100) return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
+        message.channel.fetchMessages({
+            limit: deleteCount
+        }).then(messages => {
+            message.channel.bulkDelete(messages).catch(error => message.reply(`Couldn't delete messages because of: ${error}`));;
+            message.channel.send("Purged " + messages.length + " messages!");
+        })
+	  };
 
 
 

@@ -348,12 +348,12 @@ else if(message.content.toLowerCase().startsWith(config.prefix + 'purge')) {
     }).then((messages) => {
 
         if(user === message.member){
-          const filterBy = user ? user.id : Client.user.id;
+          const filterBy = user ? user.id : bot.user.id;
           messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
           message.channel.bulkDelete(messages + 1).catch(error => console.log(error.stack) && message.channel.send('There was an error while running your command, ' + message.author + '. My apologies.'))
         }
         else if (user !== message.member) {
-          const filterBy = user ? user.id : Client.user.id;
+          const filterBy = user ? user.id : bot.user.id;
           messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
           message.channel.bulkDelete(messages).catch(error => console.log(error.stack) && message.channel.send('There was an error while running your command, ' + message.author + '. My apologies.'))
           message.delete()

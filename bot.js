@@ -337,34 +337,6 @@ if (command === "upvote") {
 				.addField('⌨️ Owner only', "Select by doing ++help owner"));
   }
 
-else if(message.content.toLowerCase().startsWith(config.prefix + 'purge')) {
-  if(message.member.hasPermission("MANAGE_MESSAGES")) {
-    const user = message.mentions.users.first();
-    const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
-    if (!amount) return message.reply('Must specify an amount to delete!');
-    if (!amount && !user) return message.reply('Must specify a user and amount, or just an amount, of messages to purge!');
-    message.channel.fetchMessages({
-      limit: console.log(amount)
-    }).then((messages) => {
-
-        if(user === message.member){
-          const filterBy = user ? user.id : bot.user.id;
-          messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
-          message.channel.bulkDelete(messages + 1).catch(error => console.log(error.stack) && message.channel.send('There was an error while running your command, ' + message.author + '. My apologies.'))
-        }
-        else if (user !== message.member) {
-          const filterBy = user ? user.id : bot.user.id;
-          messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
-          message.channel.bulkDelete(messages).catch(error => console.log(error.stack) && message.channel.send('There was an error while running your command, ' + message.author + '. My apologies.'))
-          message.delete()
-        }
-  })
-  }
-  else{
-    message.delete()
-    message.channel.send('You do not have permission to use this command, ' + message.author + '.').then(m=>m.delete(4000))
-  }
-}
 
 
 

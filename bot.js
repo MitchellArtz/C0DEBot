@@ -72,6 +72,8 @@ superagent
         message.reply("Posted API Successfully")
 });
 
+
+
 const prefix = config.prefix;
 
  bot.on('message', message => {
@@ -86,6 +88,15 @@ const prefix = config.prefix;
          message.reply('I cannot respond with DMs!')
          return;
      }
+	 if (command === "ShouldI") {
+     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
+	 let Treq = message.content.split(" ").slice(1).join(" ")
+  message.channel.sendEmbed(new Discord.RichEmbed()
+  .setColor(message.guild.me.displayHexColor)
+  .setTitle(YesOrNo + Treq()));
+}
+	 
+	 
 	if (message.content.startsWith("++" + 'ban')) {
     let userToBan = message.mentions.members.first()
     let reason = message.content.split(" ").slice(2).join(" ")
@@ -689,7 +700,11 @@ function DoRockPaperScissors() {
 
         return rand[Math.floor(Math.random()*rand.length)];
 }
+function YesOrNo() {
+        var rand = ['Yes you should ', "No you shouldn't "];
 
+        return rand[Math.floor(Math.random()*rand.length)];
+}
 function DoHeadsOrTails() {
         var rand = ['Heads', 'Tails'];
 

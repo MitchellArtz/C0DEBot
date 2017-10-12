@@ -560,6 +560,7 @@ if (command === "credits") {
   .setTitle("Bot Credits")
   .setDescription("Credits of the bot.")
   .addField("Owner", `<@${config.ownerid}>`, true)
+  .addField("Changelog Updater", `<@218678493477732362>`, true)
   .addField("Beta Testers", `<@336570068345552896> \n <@202534768456237057> \n <@236880764153757698> \n <@218678493477732362> \n <@222786765532954626> \n <@214813457860526080> \n <@224448329042362371> \n <@243095461756534784> \n <@287021283726589952> `, true)
   message.channel.sendEmbed(embed)
 }

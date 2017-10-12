@@ -90,7 +90,8 @@ const prefix = config.prefix;
      }
 	 if (command === "ShouldI") {
      if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-	 let Treq = message.content.split(" ").slice(1).join(" ")
+	/// use this to repeat or shit
+	let Treq = message.content.split(" ").slice(1).join(" ")
   message.channel.sendEmbed(new Discord.RichEmbed()
   .setColor(message.guild.me.displayHexColor)
   .setTitle(YesOrNo()));
@@ -305,6 +306,7 @@ if (command === "upvote") {
 			       .addField("RPS", "Rock Paper Scissors", true)
 			       .addField("HoT", "Heads Or Tails", true)
         .addField("randuser", "Replies with a random bot (Great for giveaways)", true)
+			       addField("ShouldI", "Ask a question if you should", true)
 			       
       .addField("8ball", "Put a question and it will tell you the truth", true))
   return;

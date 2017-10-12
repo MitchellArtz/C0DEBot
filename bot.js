@@ -305,8 +305,8 @@ if (command === "upvote") {
        .addField("randbot", "Replies with a random bot", true)
 			       .addField("RPS", "Rock Paper Scissors", true)
 			       .addField("HoT", "Heads Or Tails", true)
-        .addField("randuser", "Replies with a random bot (Great for giveaways)", true)
-			       addField("ShouldI", "Ask a question if you should", true)
+        .addField("randuser", "Replies with a random user (Great for giveaways)", true)
+			       .addField("ShouldI", "Ask a question if you should", true)
 			       
       .addField("8ball", "Put a question and it will tell you the truth", true))
   return;

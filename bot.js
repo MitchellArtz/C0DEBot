@@ -93,7 +93,7 @@ const prefix = config.prefix;
 	 let Treq = message.content.split(" ").slice(1).join(" ")
   message.channel.sendEmbed(new Discord.RichEmbed()
   .setColor(message.guild.me.displayHexColor)
-  .setTitle(YesOrNo + Treq()));
+  .setTitle(YesOrNo + "${Treq}"()));
 }
 	 
 	 

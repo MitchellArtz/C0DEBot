@@ -6,7 +6,7 @@ const Jimp = require('jimp');
 var blacklisted = require("./blacklisted.json").blacklisted
 var admin_ids = require("./admins.json").admin_ids;
 var config = require("./config.json")
-var C0DE = <@!296433716576780298>
+var C0DE = "<@!296433716576780298>"
 // For Bot List
 let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DrOmUw.AV3maIRSPOb3kXe2hWh3DJwYPHQ")
 

@@ -178,12 +178,12 @@ const prefix = config.prefix;
 
   if (command === "whoami") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-message.channel.sendMessage('Im a bot made by.' + C0DE);
+message.channel.sendMessage('Im a bot made by' + C0DE);
   }
 
   if (command === "copyright") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('©2018 C0DEBot™ and C0DE#0092');
+   message.channel.sendMessage('©2018 C0DEBot™ and' + C0DE);
   }
 
   if (command === "about") {
@@ -193,7 +193,7 @@ message.channel.sendMessage('Im a bot made by.' + C0DE);
 
   if (command === "whoisc0de") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('C0DE is the coder of this bot you shit.');
+   message.channel.sendMessage('C0DE is the coder of this bot you little shit.');
   }
 
   if (command === "tableflip") {

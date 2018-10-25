@@ -6,6 +6,7 @@ const Jimp = require('jimp');
 var blacklisted = require("./blacklisted.json").blacklisted
 var admin_ids = require("./admins.json").admin_ids;
 var config = require("./config.json")
+var C0DE = <@!296433716576780298>
 // For Bot List
 let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DrOmUw.AV3maIRSPOb3kXe2hWh3DJwYPHQ")
 
@@ -24,7 +25,7 @@ bot.on("guildCreate", guild => {
   .setDescription('I am now in ' + bot.guilds.size + ' Servers!')
   .setTimestamp();
    bot.channels.get(config.guildlog_id).sendEmbed(embed)
-    
+
     console.log(`Guild added: ${guild.name}, Owned by: ${guild.owner.user.username}#${guild.owner.user.discriminator}. I'm on ${bot.guilds.size} Guilds now`)
     console.log('Server Name: ' + guild.name + ' (' + guild.id + ')' + ' New Server added! ' + 'I am now in ' + bot.guilds.size + ' Servers!')
     bot.user.setPresence({
@@ -96,8 +97,8 @@ const prefix = config.prefix;
   .setColor(message.guild.me.displayHexColor)
   .setTitle(YesOrNo()));
 }
-	 
-	 
+
+
 	if (message.content.startsWith("++" + 'ban')) {
     let userToBan = message.mentions.members.first()
     let reason = message.content.split(" ").slice(2).join(" ")
@@ -164,7 +165,7 @@ const prefix = config.prefix;
         });
   }
 
-	 
+
   if (command === "ping") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
@@ -177,12 +178,12 @@ const prefix = config.prefix;
 
   if (command === "whoami") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('Im a bot made by C0DE#0092.');
+message.channel.sendMessage('Im a bot made by.', C0DE);
   }
 
   if (command === "copyright") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-   message.channel.sendMessage('©2017 C0DEBot™ and C0DE#0092');
+   message.channel.sendMessage('©2018 C0DEBot™ and C0DE#0092');
   }
 
   if (command === "about") {
@@ -266,12 +267,12 @@ if (command === "upvote") {
                                    .addField("avatar",    "Gives you your avatar", true)
 	.addField("ping", "Ping pong and shows response time", true)
 	.addField("invite", "Invite this bot to your server", true)
-			     
+
 			      .addField("id", "Gets your id", true)
 			      .addField("serverinvite", "Creates server invite and dms it (to disable remove create invite perm)", true)
 			      .addField("upvote", "Please upvote this bot", true)
 			      .addField("servericon", "Gives current icon for the server", true))
-        
+
     return;
     } else
     if(category === "moderation") {
@@ -307,7 +308,7 @@ if (command === "upvote") {
 			       .addField("HoT", "Heads Or Tails", true)
         .addField("randuser", "Replies with a random user (Great for giveaways)", true)
 			       .addField("ShouldI", "Ask a question if you should", true)
-			       
+
       .addField("8ball", "Put a question and it will tell you the truth", true))
   return;
   } else
@@ -630,7 +631,7 @@ if (err) throw err;
 console.log(buffer);
 }
 }
-     
+
      if(command === "userinfo") {
          let user = message.mentions.users.first();
          if (message.mentions.users.size < 1) return message.channel.sendMessage("You must mention user.")
@@ -644,7 +645,7 @@ console.log(buffer);
          .addField(`🤖 Bot`, user.bot, true)
          message.channel.send({embed, embed})
      }
-     
+
      if(command === "c0de"){
           if (message.author.id !== "296433716576780298") return message.reply("You do not have permission to use this.")
 		var str = args.join(" ");
@@ -676,7 +677,7 @@ console.log(buffer);
 			message.channel.sendEmbed(new Discord.RichEmbed().addField("Javascript Eval ERROR:", "There was a problem with the code your trying to run!").addField("Error", "```" + clean(err) + "```").setColor(message.guild.me.displayHexColor))
 			//message.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 		}
-	}  
+	}
 });
 
 function isBlacklisted(id) {

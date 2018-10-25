@@ -178,7 +178,7 @@ const prefix = config.prefix;
 
   if (command === "whoami") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-message.channel.sendMessage('Im a bot made by.', C0DE);
+message.channel.sendMessage('Im a bot made by.' + C0DE);
   }
 
   if (command === "copyright") {

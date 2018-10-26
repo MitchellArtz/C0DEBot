@@ -178,7 +178,7 @@ const prefix = config.prefix;
 
   if (command === "debug") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-    message.channel.sendMessage(message.guild.id + " " + message.channel.id)\n (bot.ping.toFixed() - 5) + " ms."
+    message.channel.sendMessage(message.guild.id + " " + message.channel.id + (bot.ping.toFixed() - 5) + " ms.")
   }
 
 

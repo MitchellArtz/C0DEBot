@@ -730,7 +730,7 @@ function doRandomSize(){
 
 }
 
-client.on("message", message => {
+bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
   if (message.content.startsWith(config.prefix + "eval2")) {

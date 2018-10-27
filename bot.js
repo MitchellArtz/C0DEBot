@@ -1,4 +1,3 @@
-// constant vars
 const Discord = require('discord.js');
 const bot = new Discord.Client
 const superagent = require('superagent');
@@ -11,7 +10,6 @@ var C0DE = "<@!296433716576780298>"
 // For Bot List
 let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DrOmUw.AV3maIRSPOb3kXe2hWh3DJwYPHQ")
 
-//for console
 bot.on('ready', () => {
     console.log('Logged in as ' + bot.user.tag + ' and I am on ' + bot.guilds.size + ' guilds!')
     bot.user.setGame("Prefix is ++", "https://www.twitch.tv/Blank");

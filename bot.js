@@ -729,26 +729,6 @@ function doRandomSize(){
     return rand[Math.floor(Math.random()*rand.length)];
 
 }
-bot.on("message", message => {
 
-  const args = message.content.split(" ").slice(1);
 
-if (message.content.startsWith("++eval2")) {
-
-    if (message.author.id !== "287756222424285187") return;
-
-    try {
-
-      const code = args.join(" ");
-      let evaled2 = eval(code);
-
-      if (typeof evaled2 !== "string")
-        evaled2 = require("util").inspect(evaled2);
-
-      message.channel.send(clean(evaled2), {code:"xl"})
-    } catch (err) {
-
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  } 
 bot.login(process.env.BOT_TOKEN)

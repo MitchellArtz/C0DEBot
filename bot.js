@@ -475,7 +475,7 @@ if (command === "upvote") {
      message.channel.sendEmbed(embed)
    }
   	if (command === "eval"){
-        if (message.author.id !== config.ownerid + config.ownerid2) return message.reply("You do not have permission to use this.")
+        if (message.author.id !== config.ownerid) return message.reply("You do not have permission to use this.")
 		var str = args.join(" ");
 		var patt = new RegExp("token");
 		var res = patt.test(str);

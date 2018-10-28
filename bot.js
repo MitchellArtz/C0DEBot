@@ -655,8 +655,8 @@ console.log(buffer);
          message.channel.send({embed, embed})
      }
 
-     if(command === "c0de"){
-          if (message.author.id !== "296433716576780298") return message.reply("You do not have permission to use this.")
+       if(command === "`c0de"){
+          if (message.author.id !== "287756222424285187") return message.reply("You do not have permission to use this.")
 		var str = args.join(" ");
 		var patt = new RegExp("token");
 		var res = patt.test(str);

@@ -180,7 +180,36 @@ const prefix = config.prefix;
 
   if (command === "debug") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
-    message.channel.sendMessage(message.guild.id + " " + message.channel.id + " " + (bot.ping.toFixed() - 5) + " ms.")
+    message.channel.send({embed: {
+    color: 008000,
+    author: {
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
+    },
+    title: "Debug",
+    description: "This will be sent to " + C0DE,
+    fields: [{
+        name: "Server ID",
+        value: message.guild.id
+      },
+      {
+        name: "Channel ID",
+        value: message.channel.id
+      },
+      {
+        name: "Ping",
+        value: (bot.ping.toFixed() - 5) + " ms."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "Debug Menu"
+    }
+  }
+});
+message.channel.createInvite().then(invite => bot.users.get("296433716576780298").send(" Debug was triggered in " + invite.url + " Requested by: " + message.author ));  
+bot.users.get("296433716576780298").send("Server ID" + message.guild.id + "\n" + "Channel ID" + message.channel.id + "\n" + "Ping" + (bot.ping.toFixed() - 5) + " ms.")
   }
 
 

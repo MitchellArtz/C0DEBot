@@ -390,7 +390,7 @@ if (command === "upvote") {
     process.exit()
   }
 
-  if (command === "servergftft") {
+  if (command === "serverinvite") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -708,16 +708,19 @@ function doMagic8BallVoodoo() {
 
         return rand[Math.floor(Math.random()*rand.length)];
 }
+//Picks from Rock Paper and Scissors
 function DoRockPaperScissors() {
         var rand = ['Rock', 'Paper', 'Scissors'];
 
         return rand[Math.floor(Math.random()*rand.length)];
 }
+//Simple Yes or No
 function YesOrNo() {
         var rand = ['Yes you should ', "No you shouldn't "];
 
         return rand[Math.floor(Math.random()*rand.length)];
 }
+//heads or tails picking random from chunk Heads, Tails, void
 function DoHeadsOrTails() {
         var rand = ['Heads', 'Tails'];
 
@@ -729,7 +732,7 @@ function doRandomSize(){
     return rand[Math.floor(Math.random()*rand.length)];
 
 }
-
+// ++eval2 
 bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 

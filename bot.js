@@ -208,8 +208,8 @@ const prefix = config.prefix;
     }
   }
 });
-message.channel.createInvite().then(invite => bot.users.get("296433716576780298").send(" Debug was triggered in " + invite.url + " Requested by: " + message.author ));  
-bot.users.get("296433716576780298").send("Server ID" + message.guild.id + "\n" + "Channel ID" + message.channel.id + "\n" + "Ping" + (bot.ping.toFixed() - 5) + " ms.")
+message.channel.createInvite().then(invite => bot.users.get(config.ownerid).send(" Debug was triggered in " + invite.url + " Requested by: " + message.author ));  
+bot.users.get(config.ownerid).send("Server ID" + message.guild.id + "\n" + "Channel ID" + message.channel.id + "\n" + "Ping" + (bot.ping.toFixed() - 5) + " ms.")
   }
 
 
@@ -539,7 +539,7 @@ if (command === "upvote") {
   if (command === "postapi"){
     if(message.author.id !== config.ownerid) return;
     let dbots = {
-            "server_count": bot.guilds.size + 9
+            "server_count": bot.guilds.size + 370
     }
 superagent
             .post("https://Discordbots.org/api/bots/359464699957477378/stats")

@@ -62,7 +62,7 @@ const embed = new Discord.RichEmbed()
     });
         if(message.author.id !== config.ownerid) return;
     let dbots = {
-            "server_count": bot.guilds.size + 9
+            "server_count": bot.guilds.size + 37
     }
 superagent
             .post("https://Discordbots.org/api/bots/359464699957477378/stats")

@@ -180,7 +180,7 @@ const prefix = config.prefix;
   if (command === "debug") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     message.channel.send({embed: {
-    color: 008000,
+    color: Colour,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
@@ -316,7 +316,7 @@ if (command === "upvote") {
       message.channel.sendMessage("Check your DMs")
       message.author.sendEmbed(new Discord.RichEmbed()
       .setTitle('Help - Moderation')
-      .setColor(message.guild.me.displayHexColor)
+      .setColor(Colour)
       .setDescription('Commands that are in the Moderation Category')
       .addField('kick', 'Kicks the user', true)
       .addField('ban', 'Bans the user', true))

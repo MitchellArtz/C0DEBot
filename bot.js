@@ -32,7 +32,7 @@ bot.on("guildCreate", guild => {
     console.log('Server Name: ' + guild.name + ' (' + guild.id + ')' + ' New Server added! ' + 'I am now in ' + bot.guilds.size + ' Servers!')
     bot.user.setPresence({
         game: {
-            name: `${config.prefix}help | ${bot.guilds.size + 9} servers!`,
+            name: `${config.prefix}help | ${bot.guilds.size + 67} servers!`,
             type: 0
         }
     });

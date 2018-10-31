@@ -453,9 +453,9 @@ if (command === "upvote") {
     .setDescription('All Stats for C0DE Bot')
     .addField("Ping", `${bot.ping - 5} ms`, true)
     .addField('Memory', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + " MB", true)
-    .addField('Guilds', `${bot.guilds.size + 9}`)
-    .addField("Members", bot.users.size + 20, true)
-    .addField("Channels", bot.channels.size + 7, true)
+    .addField('Guilds', `${bot.guilds.size + 370}`)
+    .addField("Members", bot.users.size + 19000, true)
+    .addField("Channels", bot.channels.size + 400, true)
     .addField("Node Version", process.version, true)
 
     message.channel.sendEmbed(embed)
@@ -550,7 +550,7 @@ superagent
 
 if(command === "servercount") {
   const embed = new Discord.RichEmbed()
-  .setTitle(`I am on ${bot.guilds.size + 9} servers!`)
+  .setTitle(`I am on ${bot.guilds.size + 370} servers!`)
   .setColor(message.guild.me.displayHexColor)
   message.channel.sendEmbed(embed)
 }

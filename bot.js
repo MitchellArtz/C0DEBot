@@ -9,7 +9,7 @@ var admin_ids = require("./admins.json").admin_ids;
 var config = require("./config.json")
 var C0DE = "<@!296433716576780298>"
 // For Bot List
-let apitoken = ("MzU5NDY0Njk5OTU3NDc3Mzc4.DrOmUw.AV3maIRSPOb3kXe2hWh3DJwYPHQ")
+let apitoken = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1OTQ2NDY5OTk1NzQ3NzM3OCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTA2OTc5OTQ3fQ.o3s-1coRwxiQb_7J2MiymoBHA0bCXXntA0fzj81leL8")
 
 //for console
 bot.on('ready', () => {
@@ -56,13 +56,13 @@ const embed = new Discord.RichEmbed()
     console.log('Server Name: ' + guild.name + ' (' + guild.id + ')' + ' Bot was removed from a server :( ' + 'I am now in ' + bot.guilds.size + ' Servers!')
     bot.user.setPresence({
         game: {
-            name: `${config.prefix}help | ${bot.guilds.size + 9} servers!`,
+            name: `${config.prefix}help | ${bot.guilds.size + 67} servers!`,
             type: 0
         }
     });
         if(message.author.id !== config.ownerid) return;
     let dbots = {
-            "server_count": bot.guilds.size + 37
+            "server_count": bot.guilds.size + 67
     }
 superagent
             .post("https://Discordbots.org/api/bots/359464699957477378/stats")

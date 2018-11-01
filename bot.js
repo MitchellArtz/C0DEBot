@@ -180,7 +180,7 @@ const prefix = config.prefix;
   if (command === "debug") {
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     message.channel.send({embed: {
-    color: 999900,
+    color: Colour,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL

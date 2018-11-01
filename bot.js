@@ -8,7 +8,7 @@ var blacklisted = require("./blacklisted.json").blacklisted
 var admin_ids = require("./admins.json").admin_ids;
 var config = require("./config.json")
 var C0DE = "<@!296433716576780298>"
-var Colour = 990000
+var Colour = 0x990000
 // For Bot List
 let apitoken = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1OTQ2NDY5OTk1NzQ3NzM3OCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTA2OTc5OTQ3fQ.o3s-1coRwxiQb_7J2MiymoBHA0bCXXntA0fzj81leL8")
 
@@ -294,7 +294,7 @@ if (command === "upvote") {
      message.channel.sendMessage("Check your DMs")
      message.author.sendEmbed(new Discord.RichEmbed()
         .setTitle('Help - General')
-        .setColor(Colour)
+        .setColor(bot.Colour)
         .setDescription('Commands that are in the Other Category')
         .addField("help", "This menu", true)
 			      .addField("BetaTesterSignUp", "Sign up to be a beta tester", true)

@@ -49,7 +49,7 @@ const embed = new Discord.RichEmbed()
 .setTitle(':outbox_tray: Bot was removed from a server :(')
 .setAuthor('Server Name: ' + guild.name + ' (' + guild.id + ')', guild.iconURL)
 .setThumbnail(guild.iconURL)
-.setColor(0xFF0000)
+.setColor(Colour, true)
 .setDescription('I am now in ' + bot.guilds.size + 9 + ' Servers!')
 .setTimestamp();
     bot.channels.get(config.guildlog_id).sendEmbed(embed)
@@ -95,7 +95,7 @@ const prefix = config.prefix;
 	/// use this to repeat or shit
 	let Treq = message.content.split(" ").slice(1).join(" ")
   message.channel.sendEmbed(new Discord.RichEmbed()
-  .setColor(message.guild.me.displayHexColor)
+  .setColor(Colour, true)
   .setTitle(YesOrNo()));
 }
 
@@ -171,7 +171,7 @@ const prefix = config.prefix;
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
     .setTitle(":ping_pong: Pong! " + (bot.ping.toFixed() - 5) + " ms.")
-    .setColor(Colour)
+    .setColor(Colour,true)
     message.channel.sendEmbed(embed)
   }
 
@@ -294,7 +294,7 @@ if (command === "upvote") {
      message.channel.sendMessage("Check your DMs")
      message.author.sendEmbed(new Discord.RichEmbed()
         .setTitle('Help - General')
-	.setColor(Colour)
+	.setColor(Colour,true)
 
 			      .setDescription('Commands that are in the Other Category')
         .addField("help", "This menu", true)
@@ -416,6 +416,7 @@ if (command === "upvote") {
 
   if (command === "restart") {
     if (message.author.id !== config.ownerid) return;
+	  
     process.exit()
   }
 
@@ -531,7 +532,7 @@ if (command === "upvote") {
 
 		} catch (err){
 
-			message.channel.sendEmbed(new Discord.RichEmbed().addField("Javascript Eval ERROR:", "There was a problem with the code your trying to run!").addField("Error", "```" + clean(err) + "```").setColor(message.guild.me.displayHexColor))
+			message.channel.sendEmbed(new Discord.RichEmbed().addField("Javascript Eval ERROR:", "There was a problem with the code your trying to run!").addField("Error", "```" + clean(err) + "```").setColor(Colour,true))
 			//message.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 		}
 	}

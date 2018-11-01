@@ -122,7 +122,7 @@ const prefix = config.prefix;
     message.channel.send("Success!")
     message.channel.send('', {
         embed: {
-          color: 999900,
+          color: Colour,
           author: {
             name: message.author.tag,
             icon_url: message.author.avatarURL
@@ -155,7 +155,7 @@ const prefix = config.prefix;
     message.channel.send("Success!")
     message.channel.send('', {
         embed: {
-          color: 0xff6347,
+          color: Colour,
           author: {
             name: message.author.tag,
             icon_url: message.author.avatarURL
@@ -171,7 +171,7 @@ const prefix = config.prefix;
     if(isBlacklisted(message.author.id)) return message.channel.sendMessage("Sorry, but you are Blacklisted from this bot!");
     const embed = new Discord.RichEmbed()
     .setTitle(":ping_pong: Pong! " + (bot.ping.toFixed() - 5) + " ms.")
-    .setColor(message.guild.me.displayHexColor)
+    .setColor(Colour)
     message.channel.sendEmbed(embed)
   }
 

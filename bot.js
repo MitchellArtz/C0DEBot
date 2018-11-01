@@ -294,8 +294,9 @@ if (command === "upvote") {
      message.channel.sendMessage("Check your DMs")
      message.author.sendEmbed(new Discord.RichEmbed()
         .setTitle('Help - General')
-        .setColor(bot.Colour)
-        .setDescription('Commands that are in the Other Category')
+	.setColor(Colour)
+
+			      .setDescription('Commands that are in the Other Category')
         .addField("help", "This menu", true)
 			      .addField("BetaTesterSignUp", "Sign up to be a beta tester", true)
 			      .addField("changelog", "Shows changelog", true)
